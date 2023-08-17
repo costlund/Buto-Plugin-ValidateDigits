@@ -18,7 +18,7 @@ class PluginValidateDigits{
     /**
      * 
      */
-    if($form->get("items/$field/is_valid") && strlen($form->get("items/$field/post_value"))){
+    if($form->get("items/$field/is_valid") && wfPhpfunc::strlen($form->get("items/$field/post_value"))){
       $error = false;
       /**
        * is_numeric
@@ -29,7 +29,7 @@ class PluginValidateDigits{
       /**
        * length
        */
-      if(strlen($form->get("items/$field/post_value")) != $data->get('length')){
+      if(wfPhpfunc::strlen($form->get("items/$field/post_value")) != $data->get('length')){
         $error = true;
       }
       /**
